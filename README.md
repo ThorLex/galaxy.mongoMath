@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://nodemon.io/"><img src="https://github.com/ThorLex/galaxy.mongoMath/blob/main/galaxy.png" alt="Galaxy Logo"></a>
+  <a href="http://mongomath.nettyfy.com/"><img src="https://github.com/ThorLex/galaxy.mongoMath/blob/main/galaxy.png" alt="Galaxy Logo"></a>
 </p>
 
 # mongoMath

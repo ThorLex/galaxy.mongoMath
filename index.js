@@ -1,6 +1,7 @@
 const MongoAnalyzer = require("./mongoMath");
 const MongoStats = require("./mongoSpecificAnalyser.js");
-const Mongointerpreter = require("./mongoInterpreter");
+const MongoInterpreter = require("./mongoInterpreter.js");
+const MongoNlAnalyser = require("./mongoNlanalyser.js");
 
 class MongoMath {
   constructor(uri) {
@@ -44,32 +45,5 @@ class MongoMath {
   }
 }
 module.exports = MongoMath;
-// Usage example
-const mongoMath = new MongoMath("mongodb://localhost:27017/be");
 
-(async () => {
-  await mongoMath.dataAnalyzer({
-    collection: "users",
-    crossFieldAnalysis: {
-      field1: "age",
-      field2: "height",
-    },
-    includeIndexes: true,
-    includeSchemas: true,
-  });
-})();
-console.log("before")(async () => {
-  await mongoMath.dataAnalyzer({
-    collection: "",
-    includeIndexes: true,
-    includeSchemas: true,
-  });
-})();
-
-(async () => {
-  await mongoMath.dataAnalyzer({
-    collection: "users",
-    includeIndexes: true,
-    includeSchemas: true,
-  });
-})();
+//ok
