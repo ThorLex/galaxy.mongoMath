@@ -12,15 +12,26 @@
     "start": "node server.js"
   },
   "name": "mongomath",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "mongomath.js",
   "keywords": [
     "mongodb",
-    "statistic",
-    "data analyst",
-    "open source"
+    "statistics",
+    "data analysis",
+    "data science",
+    "database metrics",
+    "cross-field analysis",
+    "database analytics",
+    "MongoDB insights",
+    "open source",
+    "data visualization",
+    "database performance",
+    "schema analysis",
+    "indexing",
+    "big data",
+    "analytics toolkit"
   ],
   "author": "Thorlex.galaxyProjects",
   "license": "ISC",
-  "description": ""
+  "description": "smart analyser mongodb with mongoose"
 }

@@ -1,6 +1,7 @@
 MongoMath
-![MongoMath Logo Placeholder](./logo.png)
-MongoMath is an advanced data analysis tool for MongoDB databases, allowing users to perform general database analysis and cross-field analysis on specified collections. It returns both basic and advanced statistical metrics, providing insights across different fields when specified.
+![MongoMath Logo Placeholder](./galaxy.png)
+[powerbyGalaxy]
+MongoMath [`MongoMath`](https://github.com/npm/json-parse-even-better-errors) is an advanced data analysis tool for MongoDB databases, allowing users to perform general database analysis and cross-field analysis on specified collections. It returns both basic and advanced statistical metrics, providing insights across different fields when specified.
 
 Documentation: [mongomath.nettyfy.com (Unavailable)](http://mongomath.nettyfy.com)
 
@@ -16,7 +17,7 @@ Importing and Initializing
 First, import and initialize MongoMath with a MongoDB URI:
 
 ```javascript
-const MongoMath = require('mongomath');
+const MongoMath = require("mongomath");
 
 const mongoMath = new MongoMath("mongodb://localhost:27017/your_database");
 ```
@@ -25,6 +26,7 @@ dataAnalyzer(params)
 The `dataAnalyzer` method performs various analyses based on the provided parameters. It can return general statistics on collections or cross-field statistics between specified fields.
 
 Parameters
+
 - **`collection`** (string, optional): Specifies the collection to analyze. If no collection is provided, the entire database is analyzed.
 - **`crossFieldAnalysis`** (object, optional): Used to perform cross-field analysis on two fields within the specified collection.
   - **`field1`** (string): The first field for cross-field analysis.
@@ -33,8 +35,9 @@ Parameters
 - **`includeSchemas`** (boolean, optional): If true, includes schema information of the documents.
 
 Examples
+
 1. Cross-Field Analysis between Two Fields
-In this example, cross-field analysis is performed between `age` and `height` fields in the `users` collection.
+   In this example, cross-field analysis is performed between `age` and `height` fields in the `users` collection.
 
 ```javascript
 const mongoMath = new MongoMath("mongodb://localhost:27017/be");
@@ -55,19 +58,19 @@ const mongoMath = new MongoMath("mongodb://localhost:27017/be");
 Expected Output:
 
 {
-  "General Statistics": {
-    "totalDocuments": 121,
-    "mean": 93.5,
-    "median": 75,
-    // Additional basic and advanced statistics
-  },
-  "Cross Field Statistics": {
-    // Cross-field data
-  }
+"General Statistics": {
+"totalDocuments": 121,
+"mean": 93.5,
+"median": 75,
+// Additional basic and advanced statistics
+},
+"Cross Field Statistics": {
+// Cross-field data
+}
 }
 
 2. General Analysis of a Specific Collection
-When only a single collection is specified, the module returns statistics for that collection without cross-field analysis.
+   When only a single collection is specified, the module returns statistics for that collection without cross-field analysis.
 
 ```javascript
 (async () => {
@@ -80,7 +83,7 @@ When only a single collection is specified, the module returns statistics for th
 ```
 
 3. Analysis of the Entire Database
-If no collection is specified, the module performs an analysis on the entire database, providing high-level database metrics and performance statistics.
+   If no collection is specified, the module performs an analysis on the entire database, providing high-level database metrics and performance statistics.
 
 ```javascript
 (async () => {
@@ -99,4 +102,3 @@ This module is licensed under MIT.
 
 Contributing
 We welcome contributors to help expand MongoMath! Check out our [documentation (Unavailable)](http://mongomath.nettyfy.com) for more details.
-
