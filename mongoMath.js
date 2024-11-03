@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const logger = require("./utils/logger");
 
-class DatabaseAnalyzer {
+class MongoAnalyzer {
   constructor(config = {}) {
     this.isConnected = false;
     this.uri = config.uri || process.env.MONGO_URI;
@@ -356,6 +356,6 @@ class DatabaseAnalyzer {
   }
 }
 
-module.exports = DatabaseAnalyzer;
+module.exports = MongoAnalyzer;
 
 // ok
