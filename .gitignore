@@ -7,5 +7,5 @@ other/
 unittest/
 
 # Files to exclude
-mathutils.js
+mongoMaths.js
 mongoSpecificAnalyser.js
