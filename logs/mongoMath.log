@@ -1,0 +1,278 @@
+2024-11-03 22:33:44 [INFO] Successfully connected to database
+2024-11-03 22:33:44 [INFO] Successfully disconnected from database
+2024-11-03 22:33:44 [INFO] Successfully connected to database
+2024-11-03 22:33:44 [INFO] Successfully disconnected from database
+2024-11-03 22:33:58 [INFO] Successfully connected to database
+2024-11-03 22:33:58 [INFO] Successfully disconnected from database
+2024-11-03 22:33:58 [INFO] Successfully connected to database
+2024-11-03 22:33:58 [INFO] Successfully disconnected from database
+2024-11-03 22:34:05 [INFO] Successfully connected to database
+2024-11-03 22:34:05 [INFO] Successfully disconnected from database
+2024-11-03 22:34:05 [INFO] Successfully connected to database
+2024-11-03 22:34:05 [INFO] Successfully disconnected from database
+2024-11-03 22:34:23 [INFO] Successfully connected to database
+2024-11-03 22:34:23 [INFO] Successfully disconnected from database
+2024-11-03 22:34:24 [INFO] Successfully connected to database
+2024-11-03 22:34:24 [INFO] Successfully disconnected from database
+2024-11-03 22:35:54 [INFO] Successfully connected to database
+2024-11-03 22:35:54 [ERROR] TypeError: Cannot read properties of undefined (reading 'stats')
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\mongomath\testing.js:61:3
+2024-11-03 22:35:54 [ERROR] TypeError: Cannot read properties of undefined (reading 'stats')
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\mongomath\testing.js:61:3
+2024-11-03 22:35:54 [INFO] Successfully connected to database
+2024-11-03 22:35:54 [ERROR] MongoNotConnectedError: Client must be connected before running operations
+    at autoConnect (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:88:19)
+    at executeOperation (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:36:28)
+    at Db.stats (D:\mongomath\node_modules\mongodb\lib\db.js:225:63)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\mongomath\testing.js:50:3
+2024-11-03 22:35:54 [ERROR] MongoNotConnectedError: Client must be connected before running operations
+    at autoConnect (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:88:19)
+    at executeOperation (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:36:28)
+    at Db.stats (D:\mongomath\node_modules\mongodb\lib\db.js:225:63)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\mongomath\testing.js:50:3
+2024-11-03 22:35:54 [INFO] Successfully disconnected from database
+2024-11-03 22:35:54 [INFO] Successfully disconnected from database
+2024-11-03 22:35:54 [INFO] Successfully connected to database
+2024-11-03 22:35:54 [INFO] Successfully connected to database
+2024-11-03 22:35:54 [ERROR] MongoNotConnectedError: Client must be connected before running operations
+    at autoConnect (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:88:19)
+    at executeOperation (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:36:28)
+    at FindCursor._initialize (D:\mongomath\node_modules\mongodb\lib\cursor\find_cursor.js:51:73)
+    at FindCursor.cursorInit (D:\mongomath\node_modules\mongodb\lib\cursor\abstract_cursor.js:495:38)
+    at FindCursor.fetchBatch (D:\mongomath\node_modules\mongodb\lib\cursor\abstract_cursor.js:527:24)
+    at FindCursor.next (D:\mongomath\node_modules\mongodb\lib\cursor\abstract_cursor.js:239:24)
+    at [Symbol.asyncIterator] (D:\mongomath\node_modules\mongodb\lib\cursor\abstract_cursor.js:170:45)
+    at AsyncGenerator.next (<anonymous>)
+    at FindCursor.toArray (D:\mongomath\node_modules\mongodb\lib\cursor\abstract_cursor.js:300:26)
+    at model.Query._find (D:\mongomath\node_modules\mongoose\lib\query.js:2322:27)
+2024-11-03 22:35:54 [INFO] Successfully disconnected from database
+2024-11-03 22:35:54 [INFO] Successfully disconnected from database
+2024-11-03 22:36:17 [INFO] Successfully connected to database
+2024-11-03 22:36:17 [ERROR] TypeError: Cannot read properties of undefined (reading 'stats')
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\mongomath\testing.js:62:3
+2024-11-03 22:36:17 [ERROR] TypeError: Cannot read properties of undefined (reading 'stats')
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\mongomath\testing.js:62:3
+2024-11-03 22:36:17 [INFO] Successfully connected to database
+2024-11-03 22:36:17 [ERROR] MongoNotConnectedError: Client must be connected before running operations
+    at autoConnect (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:88:19)
+    at executeOperation (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:36:28)
+    at Db.stats (D:\mongomath\node_modules\mongodb\lib\db.js:225:63)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\mongomath\testing.js:50:3
+2024-11-03 22:36:17 [ERROR] MongoNotConnectedError: Client must be connected before running operations
+    at autoConnect (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:88:19)
+    at executeOperation (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:36:28)
+    at Db.stats (D:\mongomath\node_modules\mongodb\lib\db.js:225:63)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\mongomath\testing.js:50:3
+2024-11-03 22:36:17 [INFO] Successfully disconnected from database
+2024-11-03 22:36:17 [INFO] Successfully disconnected from database
+2024-11-03 22:36:17 [INFO] Successfully connected to database
+2024-11-03 22:36:17 [INFO] Successfully connected to database
+2024-11-03 22:36:17 [ERROR] MongoNotConnectedError: Client must be connected before running operations
+    at autoConnect (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:88:19)
+    at executeOperation (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:36:28)
+    at FindCursor._initialize (D:\mongomath\node_modules\mongodb\lib\cursor\find_cursor.js:51:73)
+    at FindCursor.cursorInit (D:\mongomath\node_modules\mongodb\lib\cursor\abstract_cursor.js:495:38)
+    at FindCursor.fetchBatch (D:\mongomath\node_modules\mongodb\lib\cursor\abstract_cursor.js:527:24)
+    at FindCursor.next (D:\mongomath\node_modules\mongodb\lib\cursor\abstract_cursor.js:239:24)
+    at [Symbol.asyncIterator] (D:\mongomath\node_modules\mongodb\lib\cursor\abstract_cursor.js:170:45)
+    at AsyncGenerator.next (<anonymous>)
+    at FindCursor.toArray (D:\mongomath\node_modules\mongodb\lib\cursor\abstract_cursor.js:300:26)
+    at model.Query._find (D:\mongomath\node_modules\mongoose\lib\query.js:2322:27)
+2024-11-03 22:36:17 [INFO] Successfully disconnected from database
+2024-11-03 22:36:17 [INFO] Successfully disconnected from database
+2024-11-03 22:36:34 [INFO] Successfully connected to database
+2024-11-03 22:36:34 [INFO] Successfully disconnected from database
+2024-11-03 22:36:34 [INFO] Successfully connected to database
+2024-11-03 22:36:34 [INFO] Successfully disconnected from database
+2024-11-03 22:36:59 [INFO] Successfully connected to database
+2024-11-03 22:36:59 [INFO] Successfully disconnected from database
+2024-11-03 22:36:59 [INFO] Successfully connected to database
+2024-11-03 22:36:59 [INFO] Successfully disconnected from database
+2024-11-03 22:37:44 [INFO] Successfully connected to database
+2024-11-03 22:37:44 [INFO] Successfully disconnected from database
+2024-11-03 22:37:44 [INFO] Successfully connected to database
+2024-11-03 22:37:44 [INFO] Successfully disconnected from database
+2024-11-03 22:49:23 [INFO] Successfully connected to database
+2024-11-03 22:49:23 [INFO] Successfully disconnected from database
+2024-11-03 22:49:23 [INFO] Successfully connected to database
+2024-11-03 22:49:23 [INFO] Successfully disconnected from database
+2024-11-03 22:49:59 [INFO] Successfully connected to database
+2024-11-03 22:50:00 [INFO] Successfully disconnected from database
+2024-11-03 22:50:00 [INFO] Successfully connected to database
+2024-11-03 22:50:00 [INFO] Successfully disconnected from database
+2024-11-03 22:54:29 [INFO] Successfully connected to database
+2024-11-03 22:54:29 [INFO] Successfully disconnected from database
+2024-11-03 22:54:29 [INFO] Successfully connected to database
+2024-11-03 22:54:29 [INFO] Successfully disconnected from database
+2024-11-03 22:54:32 [INFO] Successfully connected to database
+2024-11-03 22:54:32 [INFO] Successfully disconnected from database
+2024-11-03 22:54:32 [INFO] Successfully connected to database
+2024-11-03 22:54:32 [INFO] Successfully disconnected from database
+2024-11-03 23:44:14 [INFO] Successfully connected to database
+2024-11-03 23:44:15 [INFO] Successfully disconnected from database
+2024-11-03 23:44:15 [INFO] Successfully connected to database
+2024-11-03 23:44:15 [INFO] Successfully disconnected from database
+2024-11-03 23:44:24 [ERROR] MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+    at NativeConnection.createClient (D:\mongomath\node_modules\mongoose\lib\drivers\node-mongodb-native\connection.js:239:13)
+    at NativeConnection.openUri (D:\mongomath\node_modules\mongoose\lib\connection.js:835:34)
+    at Mongoose.connect (D:\mongomath\node_modules\mongoose\lib\mongoose.js:447:15)
+    at DatabaseAnalyzer.connect (D:\mongomath\globaldb.js:13:29)
+    at DatabaseAnalyzer.getQuickOverview (D:\mongomath\globaldb.js:38:18)
+    at getOverview (D:\mongomath\testing.js:68:37)
+    at D:\mongomath\testing.js:100:9
+    at Object.<anonymous> (D:\mongomath\testing.js:103:3)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+2024-11-03 23:44:24 [ERROR] MongooseError: Can't call `openUri()` on an active connection with different connection strings. Make sure you aren't calling `mongoose.connect()` multiple times. See: https://mongoosejs.com/docs/connections.html#multiple_connections
+    at NativeConnection.createClient (D:\mongomath\node_modules\mongoose\lib\drivers\node-mongodb-native\connection.js:239:13)
+    at NativeConnection.openUri (D:\mongomath\node_modules\mongoose\lib\connection.js:835:34)
+    at Mongoose.connect (D:\mongomath\node_modules\mongoose\lib\mongoose.js:447:15)
+    at DatabaseAnalyzer.connect (D:\mongomath\globaldb.js:13:29)
+    at DatabaseAnalyzer.analyzeDatabaseFull (D:\mongomath\globaldb.js:59:18)
+    at getFullAnalysis (D:\mongomath\testing.js:78:37)
+    at D:\mongomath\testing.js:56:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-11-03 23:44:24 [INFO] Successfully connected to database
+2024-11-03 23:44:24 [INFO] Successfully disconnected from database
+2024-11-03 23:44:24 [INFO] Successfully connected to database
+2024-11-03 23:44:24 [INFO] Successfully disconnected from database
+2024-11-03 23:45:14 [INFO] Successfully connected to database
+2024-11-03 23:45:15 [INFO] Successfully connected to database
+2024-11-03 23:45:15 [INFO] Successfully disconnected from database
+2024-11-03 23:45:15 [INFO] Successfully disconnected from database
+2024-11-03 23:45:57 [INFO] Successfully connected to database
+2024-11-03 23:45:57 [INFO] Successfully connected to database
+2024-11-03 23:45:57 [INFO] Successfully disconnected from database
+2024-11-03 23:45:57 [INFO] Successfully disconnected from database
+2024-11-03 23:46:25 [INFO] Successfully connected to database
+2024-11-03 23:46:26 [INFO] Successfully connected to database
+2024-11-03 23:46:26 [INFO] Successfully disconnected from database
+2024-11-03 23:46:26 [INFO] Successfully disconnected from database
+2024-11-03 23:46:30 [INFO] Successfully connected to database
+2024-11-03 23:46:31 [INFO] Successfully connected to database
+2024-11-03 23:46:31 [INFO] Successfully disconnected from database
+2024-11-03 23:46:31 [INFO] Successfully disconnected from database
+2024-11-03 23:46:56 [INFO] Successfully connected to database
+2024-11-03 23:46:56 [INFO] Successfully connected to database
+2024-11-03 23:46:56 [INFO] Successfully disconnected from database
+2024-11-03 23:46:56 [INFO] Successfully disconnected from database
+2024-11-03 23:47:00 [INFO] Successfully connected to database
+2024-11-03 23:47:00 [INFO] Successfully connected to database
+2024-11-03 23:47:00 [INFO] Successfully disconnected from database
+2024-11-03 23:47:00 [INFO] Successfully disconnected from database
+2024-11-03 23:47:02 [INFO] Successfully connected to database
+2024-11-03 23:47:02 [INFO] Successfully connected to database
+2024-11-03 23:47:02 [INFO] Successfully disconnected from database
+2024-11-03 23:47:02 [INFO] Successfully disconnected from database
+2024-11-03 23:47:17 [INFO] Successfully connected to database
+2024-11-03 23:47:17 [INFO] Successfully connected to database
+2024-11-03 23:47:17 [INFO] Successfully disconnected from database
+2024-11-03 23:47:17 [INFO] Successfully disconnected from database
+2024-11-03 23:47:30 [INFO] Successfully connected to database
+2024-11-03 23:47:30 [INFO] Successfully connected to database
+2024-11-03 23:47:30 [INFO] Successfully disconnected from database
+2024-11-03 23:47:30 [INFO] Successfully disconnected from database
+2024-11-03 23:48:09 [INFO] Successfully connected to database
+2024-11-03 23:48:09 [INFO] Successfully disconnected from database
+2024-11-03 23:48:09 [INFO] Successfully connected to database
+2024-11-03 23:48:10 [INFO] Successfully disconnected from database
+2024-11-03 23:48:15 [INFO] Successfully connected to database
+2024-11-03 23:48:15 [INFO] Successfully connected to database
+2024-11-03 23:48:15 [INFO] Successfully disconnected from database
+2024-11-03 23:48:15 [INFO] Successfully disconnected from database
+2024-11-03 23:48:18 [INFO] Successfully connected to database
+2024-11-03 23:48:18 [INFO] Successfully connected to database
+2024-11-03 23:48:18 [INFO] Successfully disconnected from database
+2024-11-03 23:48:18 [INFO] Successfully disconnected from database
+2024-11-03 23:48:33 [INFO] Successfully connected to database
+2024-11-03 23:48:33 [INFO] Successfully connected to database
+2024-11-03 23:48:33 [INFO] Successfully disconnected from database
+2024-11-03 23:48:33 [INFO] Successfully disconnected from database
+2024-11-03 23:50:12 [INFO] Successfully connected to database
+2024-11-03 23:50:13 [INFO] Successfully connected to database
+2024-11-03 23:50:13 [INFO] Successfully disconnected from database
+2024-11-03 23:50:13 [INFO] Successfully disconnected from database
+2024-11-03 23:51:23 [INFO] Successfully connected to database
+2024-11-03 23:51:23 [INFO] Successfully connected to database
+2024-11-03 23:51:23 [INFO] Successfully disconnected from database
+2024-11-03 23:51:23 [INFO] Successfully disconnected from database
+2024-11-03 23:51:41 [INFO] Successfully connected to database
+2024-11-03 23:51:42 [INFO] Successfully connected to database
+2024-11-03 23:51:42 [INFO] Successfully disconnected from database
+2024-11-03 23:51:42 [INFO] Successfully disconnected from database
+2024-11-03 23:54:45 [INFO] Successfully connected to database
+2024-11-03 23:54:45 [INFO] Successfully disconnected from database
+2024-11-03 23:54:45 [INFO] Successfully connected to database
+2024-11-03 23:54:45 [INFO] Successfully disconnected from database
+2024-11-03 23:54:55 [INFO] Successfully connected to database
+2024-11-03 23:54:56 [INFO] Successfully disconnected from database
+2024-11-03 23:54:56 [INFO] Successfully connected to database
+2024-11-03 23:54:56 [INFO] Successfully disconnected from database
+2024-11-03 23:55:02 [INFO] Successfully connected to database
+2024-11-03 23:55:02 [INFO] Successfully disconnected from database
+2024-11-03 23:55:02 [INFO] Successfully connected to database
+2024-11-03 23:55:02 [INFO] Successfully disconnected from database
+2024-11-03 23:56:08 [INFO] Successfully connected to database
+2024-11-03 23:56:08 [INFO] Successfully disconnected from database
+2024-11-03 23:56:09 [INFO] Successfully connected to database
+2024-11-03 23:56:09 [INFO] Successfully disconnected from database
+2024-11-03 23:56:16 [INFO] Successfully connected to database
+2024-11-03 23:56:17 [INFO] Successfully disconnected from database
+2024-11-03 23:56:17 [INFO] Successfully connected to database
+2024-11-03 23:56:17 [INFO] Successfully disconnected from database
+2024-11-03 23:57:43 [INFO] Successfully connected to database
+2024-11-03 23:57:43 [INFO] Successfully disconnected from database
+2024-11-03 23:57:43 [INFO] Successfully connected to database
+2024-11-03 23:57:43 [INFO] Successfully disconnected from database
+2024-11-04 00:08:20 [INFO] Successfully connected to database
+2024-11-04 00:08:20 [INFO] Successfully disconnected from database
+2024-11-04 00:08:20 [INFO] Successfully connected to database
+2024-11-04 00:08:20 [INFO] Successfully disconnected from database
+2024-11-04 00:12:44 [INFO] Successfully connected to database
+2024-11-04 00:12:44 [INFO] Successfully disconnected from database
+2024-11-04 00:12:44 [INFO] Successfully connected to database
+2024-11-04 00:12:44 [INFO] Successfully disconnected from database
+2024-11-04 00:12:50 [INFO] Successfully connected to database
+2024-11-04 00:12:50 [INFO] Successfully disconnected from database
+2024-11-04 00:12:50 [INFO] Successfully connected to database
+2024-11-04 00:12:50 [INFO] Successfully disconnected from database
+2024-11-04 00:13:03 [INFO] Successfully connected to database
+2024-11-04 00:13:03 [INFO] Successfully disconnected from database
+2024-11-04 00:13:03 [INFO] Successfully connected to database
+2024-11-04 00:13:03 [INFO] Successfully disconnected from database
+2024-11-04 00:14:20 [INFO] Successfully connected to database
+2024-11-04 00:14:20 [INFO] Successfully disconnected from database
+2024-11-04 00:14:29 [INFO] Successfully connected to database
+2024-11-04 00:14:29 [INFO] Successfully disconnected from database
