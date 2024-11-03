@@ -32,9 +32,8 @@
     "analytics toolkit"
   ],
   "exclude": [
-    "./mathutils.js",
-    "./mathUtils.js",
-    ""
+    "mongoMath.js",
+    "mongoSpecificAnalyser.js"
   ],
   "author": "Thorlex.galaxyProjects",
   "license": "ISC",
