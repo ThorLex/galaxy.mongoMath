@@ -1,10 +1,11 @@
+# Folders to exclude
 node_modules/
 views/
-loger/
+logger/
 lib/
 other/
 unittest/
-./mathutils.js
-./mongoSpecificAnalyser.js
-exclude: ['./mongoSpecificAnalyser.js']
-exclude: ['./mathutils.js']
+
+# Files to exclude
+mathutils.js
+mongoSpecificAnalyser.js
