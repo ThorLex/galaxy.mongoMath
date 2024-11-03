@@ -1,7 +1,10 @@
-MongoMath
-![MongoMath Logo Placeholder](./galaxy.png)
-[powerbyGalaxy]
-MongoMath [`MongoMath`](https://github.com/npm/json-parse-even-better-errors) is an advanced data analysis tool for MongoDB databases, allowing users to perform general database analysis and cross-field analysis on specified collections. It returns both basic and advanced statistical metrics, providing insights across different fields when specified.
+<p align="center">
+  <a href="https://nodemon.io/"><img src="https://github.com/ThorLex/galaxy.mongoMath/blob/main/galaxy.png" alt="Galaxy Logo"></a>
+</p>
+
+# mongoMath
+
+MongoMath [`MongoMath`](https://github.com/ThorLex/galaxy.mongoMath) is an advanced data analysis tool for MongoDB databases, allowing users to perform general database analysis and cross-field analysis on specified collections. It returns both basic and advanced statistical metrics, providing insights across different fields when specified.
 
 Documentation: [mongomath.nettyfy.com (Unavailable)](http://mongomath.nettyfy.com)
 

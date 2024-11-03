@@ -6,3 +6,5 @@ other/
 unittest/
 ./mathutils.js
 ./mongoSpecificAnalyser.js
+exclude: ['./mongoSpecificAnalyser.js']
+exclude: ['./mathutils.js']
