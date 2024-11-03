@@ -18,7 +18,7 @@ function calculateMedian(arr) {
 function calculateMode(arr) {
   const frequency = {};
   let maxFreq = 0;
-  let mode;
+  let mode;a
   for (const num of arr) {
     frequency[num] = (frequency[num] || 0) + 1;
     if (frequency[num] > maxFreq) {

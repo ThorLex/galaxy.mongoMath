@@ -7,19 +7,21 @@
     "express": "^4.21.1",
     "faker": "^6.6.6",
     "fs": "^0.0.1-security",
+    "json2csv": "^6.0.0-alpha.2",
     "mathjs": "^13.2.0",
     "moment": "^2.30.1",
     "mongoose": "^8.7.3",
     "nodemon": "^3.1.7",
     "path": "^0.12.7",
-    "winston": "^3.16.0"
+    "winston": "^3.16.0",
+    "xml2js": "^0.6.2"
   },
   "scripts": {
-    "run": "nodemon server.js",
+    "run": "nodemon test.js",
     "start": "node server.js"
   },
   "name": "mongomath",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "mongomath.js",
   "keywords": [
     "mongodb",
