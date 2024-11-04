@@ -16,14 +16,14 @@
 2024-11-03 22:34:24 [INFO] Successfully disconnected from database
 2024-11-03 22:35:54 [INFO] Successfully connected to database
 2024-11-03 22:35:54 [ERROR] TypeError: Cannot read properties of undefined (reading 'stats')
-    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
-    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoGeneralAnalyser.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoGeneralAnalyser.js:94:36)
     at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\mongomath\testing.js:61:3
 2024-11-03 22:35:54 [ERROR] TypeError: Cannot read properties of undefined (reading 'stats')
-    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
-    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoGeneralAnalyser.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoGeneralAnalyser.js:94:36)
     at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\mongomath\testing.js:61:3
@@ -32,8 +32,8 @@
     at autoConnect (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:88:19)
     at executeOperation (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:36:28)
     at Db.stats (D:\mongomath\node_modules\mongodb\lib\db.js:225:63)
-    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
-    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoGeneralAnalyser.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoGeneralAnalyser.js:94:36)
     at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\mongomath\testing.js:50:3
@@ -41,8 +41,8 @@
     at autoConnect (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:88:19)
     at executeOperation (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:36:28)
     at Db.stats (D:\mongomath\node_modules\mongodb\lib\db.js:225:63)
-    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
-    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoGeneralAnalyser.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoGeneralAnalyser.js:94:36)
     at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\mongomath\testing.js:50:3
@@ -65,14 +65,14 @@
 2024-11-03 22:35:54 [INFO] Successfully disconnected from database
 2024-11-03 22:36:17 [INFO] Successfully connected to database
 2024-11-03 22:36:17 [ERROR] TypeError: Cannot read properties of undefined (reading 'stats')
-    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
-    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoGeneralAnalyser.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoGeneralAnalyser.js:94:36)
     at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\mongomath\testing.js:62:3
 2024-11-03 22:36:17 [ERROR] TypeError: Cannot read properties of undefined (reading 'stats')
-    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
-    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoGeneralAnalyser.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoGeneralAnalyser.js:94:36)
     at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\mongomath\testing.js:62:3
@@ -81,8 +81,8 @@
     at autoConnect (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:88:19)
     at executeOperation (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:36:28)
     at Db.stats (D:\mongomath\node_modules\mongodb\lib\db.js:225:63)
-    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
-    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoGeneralAnalyser.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoGeneralAnalyser.js:94:36)
     at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\mongomath\testing.js:50:3
@@ -90,8 +90,8 @@
     at autoConnect (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:88:19)
     at executeOperation (D:\mongomath\node_modules\mongodb\lib\operations\execute_operation.js:36:28)
     at Db.stats (D:\mongomath\node_modules\mongodb\lib\db.js:225:63)
-    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoMath.js:71:50)
-    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoMath.js:94:36)
+    at MongoAnalyzer.getDatabaseInfo (D:\mongomath\mongoGeneralAnalyser.js:71:50)
+    at MongoAnalyzer.analyzeDatabaseComplete (D:\mongomath\mongoGeneralAnalyser.js:94:36)
     at MongoMath.dataAnalyzer (D:\mongomath\testing.js:15:38)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\mongomath\testing.js:50:3
@@ -276,3 +276,19 @@
 2024-11-04 00:14:20 [INFO] Successfully disconnected from database
 2024-11-04 00:14:29 [INFO] Successfully connected to database
 2024-11-04 00:14:29 [INFO] Successfully disconnected from database
+2024-11-04 08:11:23 [INFO] Successfully connected to database
+2024-11-04 08:11:23 [INFO] Successfully disconnected from database
+2024-11-04 08:11:24 [INFO] Successfully connected to database
+2024-11-04 08:11:24 [INFO] Successfully disconnected from database
+2024-11-04 08:22:42 [INFO] Successfully connected to database
+2024-11-04 08:22:42 [INFO] Successfully disconnected from database
+2024-11-04 08:22:42 [INFO] Successfully connected to database
+2024-11-04 08:22:42 [INFO] Successfully disconnected from database
+2024-11-04 08:27:18 [INFO] Successfully connected to database
+2024-11-04 08:27:18 [INFO] Successfully disconnected from database
+2024-11-04 08:27:18 [INFO] Successfully connected to database
+2024-11-04 08:27:18 [INFO] Successfully disconnected from database
+2024-11-04 08:51:16 [INFO] Successfully connected to database
+2024-11-04 08:51:16 [INFO] Successfully disconnected from database
+2024-11-04 08:51:16 [INFO] Successfully connected to database
+2024-11-04 08:51:16 [INFO] Successfully disconnected from database

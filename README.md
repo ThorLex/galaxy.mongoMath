@@ -20,7 +20,7 @@ Importing and Initializing
 First, import and initialize MongoMath with a MongoDB URI:
 
 ```javascript
-const MongoMath = require("mongomath");
+const MongoMath = require("mongoGeneralAnalyser");
 
 const mongoMath = new MongoMath("mongodb://localhost:27017/your_database");
 ```

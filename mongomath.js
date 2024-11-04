@@ -1,4 +1,4 @@
-const MongoAnalyzer = require("./mongoMath");
+const MongoAnalyzer = require("./mongoGeneralAnalyser");
 const MongoStats = require("./mongoSpecificAnalyser.js");
 const MongoInterpreter = require("./mongoInterpreter.js");
 const MongoNlAnalyser = require("./mongoNlanalyser.js");
