@@ -105,3 +105,292 @@ This module is licensed under MIT.
 
 Contributing
 We welcome contributors to help expand MongoMath! Check out our [documentation (Unavailable)](http://mongomath.nettyfy.com) for more details.
+# MongoAnalyzer
+Documentation technique
+Version 1.0
+___
+
+## Table des matières
+
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Configuration](#configuration)
+4. [API de référence](#api-de-référence)
+5. [Exemples d'utilisation](#exemples-dutilisation)
+6. [Gestion des erreurs](#gestion-des-erreurs)
+
+___
+
+## 1. Introduction
+
+MongoAnalyzer est un outil d'analyse avancé pour MongoDB qui permet d'obtenir des statistiques détaillées et des métriques sur votre base de données. Cet outil est conçu pour fournir une vision complète de la santé et des performances de votre base de données MongoDB.
+
+## 2. Installation
+
+### 2.1 Prérequis
+- Node.js (version 12 ou supérieure)
+- MongoDB (version 4.0 ou supérieure)
+- mongoose
+
+### 2.2 Procédure d'installation
+```bash
+npm install mongo-analyzer
+```
+
+## 3. Configuration
+
+### 3.1 Création d'une instance
+
+La classe MongoAnalyzer peut être initialisée avec différentes options de configuration :
+
+```javascript
+const MongoAnalyzer = require('mongo-analyzer');
+
+const analyzer = new MongoAnalyzer({
+    uri: 'mongodb://localhost:27017/mydatabase',
+    mongooseOptions: {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }
+});
+```
+
+### 3.2 Options de configuration
+
+| Option | Type | Description | Obligatoire |
+|--------|------|-------------|-------------|
+| uri | String | URI de connexion MongoDB | Oui |
+| mongooseOptions | Object | Options de configuration Mongoose | Non |
+
+## 4. API de référence
+
+### 4.1 Gestion de la connexion
+
+#### connect()
+**Description :** Établit la connexion à la base de données MongoDB.
+
+**Retourne :** Promise<void>
+
+**Exemple :**
+```javascript
+await analyzer.connect();
+```
+
+#### disconnect()
+**Description :** Ferme la connexion à la base de données.
+
+**Retourne :** Promise<void>
+
+**Exemple :**
+```javascript
+await analyzer.disconnect();
+```
+
+### 4.2 Analyse de base de données
+
+#### getDatabaseInfo(options)
+**Description :** Récupère les informations de base sur la base de données.
+
+**Paramètres :**
+- options (Object, optionnel) : Options d'analyse
+
+**Retourne :** 
+```javascript
+{
+    dbName: String,
+    collections: Number,
+    objects: Number,
+    avgObjSize: Number,
+    dataSize: Number
+}
+```
+
+#### analyzeDatabaseComplete(options)
+**Description :** Effectue une analyse complète de la base de données.
+
+**Paramètres :**
+- options (Object, optionnel) : Options d'analyse
+
+**Retourne :**
+```javascript
+{
+    timestamp: Date,
+    databaseInfo: Object,
+    collectionStatistics: Object,
+    performanceMetrics: Object,
+    storageAnalysis: Object
+}
+```
+
+### 4.3 Analyse des collections
+
+#### getDetailedCollectionStats()
+**Description :** Fournit des statistiques détaillées pour toutes les collections.
+
+**Retourne :**
+```javascript
+{
+    [collectionName]: {
+        dataDistribution: Object,
+        fieldStats: Object
+    }
+}
+```
+
+#### analyzeDataDistribution(collectionName)
+**Description :** Analyse la distribution des données dans une collection spécifique.
+
+**Paramètres :**
+- collectionName (String) : Nom de la collection à analyser
+
+**Retourne :**
+```javascript
+{
+    documentSizes: Object,
+    fieldCounts: Object,
+    updateFrequency: Object
+}
+```
+
+### 4.4 Analyse des performances
+
+#### getPerformanceMetrics()
+**Description :** Récupère les métriques de performance de l'instance MongoDB.
+
+**Retourne :**
+```javascript
+{
+    operations: {
+        totalOperations: Object,
+        activeConnections: Object,
+        networkStats: Object
+    },
+    memory: {
+        virtualMemory: Number,
+        residentMemory: Number,
+        mappedMemory: Number
+    },
+    storage: {
+        dataSize: Number,
+        storageSize: Number,
+        indexes: Number,
+        indexSize: Number
+    }
+}
+```
+
+#### getStorageAnalysis()
+**Description :** Effectue une analyse du stockage pour toutes les collections.
+
+**Retourne :**
+```javascript
+{
+    collections: {
+        [collectionName]: {
+            size: Number,
+            indexSize: Number,
+            avgDocumentSize: Number,
+            utilization: Number
+        }
+    },
+    summary: {
+        totalSize: Number,
+        totalIndexSize: Number,
+        totalCollections: Number,
+        averageCollectionSize: Number
+    }
+}
+```
+
+## 5. Exemples d'utilisation
+
+### 5.1 Analyse complète de la base de données
+
+```javascript
+const MongoAnalyzer = require('mongo-analyzer');
+
+async function analyzeDatabase() {
+    const analyzer = new MongoAnalyzer({
+        uri: 'mongodb://localhost:27017/mydatabase'
+    });
+
+    try {
+        await analyzer.connect();
+        
+        // Analyse complète
+        const analysis = await analyzer.analyzeDatabaseComplete();
+        console.log('Analyse complète:', analysis);
+        
+        // Analyse du stockage
+        const storage = await analyzer.getStorageAnalysis();
+        console.log('Analyse du stockage:', storage);
+        
+        // Métriques de performance
+        const metrics = await analyzer.getPerformanceMetrics();
+        console.log('Métriques de performance:', metrics);
+        
+    } catch (error) {
+        console.error('Erreur lors de l'analyse:', error);
+    } finally {
+        await analyzer.disconnect();
+    }
+}
+```
+
+### 5.2 Analyse d'une collection spécifique
+
+```javascript
+async function analyzeCollection(collectionName) {
+    const analyzer = new MongoAnalyzer({
+        uri: 'mongodb://localhost:27017/mydatabase'
+    });
+
+    try {
+        await analyzer.connect();
+        
+        const distribution = await analyzer.analyzeDataDistribution(collectionName);
+        console.log('Distribution des données:', distribution);
+        
+        const fieldStats = await analyzer.analyzeFieldStatistics(collectionName);
+        console.log('Statistiques des champs:', fieldStats);
+        
+    } catch (error) {
+        console.error('Erreur lors de l'analyse:', error);
+    } finally {
+        await analyzer.disconnect();
+    }
+}
+```
+
+## 6. Gestion des erreurs
+
+### 6.1 Types d'erreurs courants
+
+| Type d'erreur | Description | Solution |
+|---------------|-------------|----------|
+| ConnectionError | Échec de connexion à la base de données | Vérifier l'URI et la connectivité réseau |
+| AuthenticationError | Échec d'authentification | Vérifier les identifiants |
+| OperationError | Échec d'une opération d'analyse | Vérifier les permissions et la disponibilité des ressources |
+
+### 6.2 Bonnes pratiques
+
+```javascript
+try {
+    await analyzer.connect();
+    const analysis = await analyzer.analyzeDatabaseComplete();
+} catch (error) {
+    if (error instanceof mongoose.Error.ConnectionError) {
+        console.error('Erreur de connexion:', error);
+    } else if (error instanceof mongoose.Error.ValidationError) {
+        console.error('Erreur de validation:', error);
+    } else {
+        console.error('Erreur inattendue:', error);
+    }
+} finally {
+    await analyzer.disconnect();
+}
+```
+
+___
+
+© 2024 MongoAnalyzer. Tous droits réservés.
