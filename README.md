@@ -137,6 +137,28 @@ const stats = await mongoMath.calculateStatistics(
 );
 ```
 
+### 12. `alyzeDatabaseComplete(collection, field1, field2, selfloading)`
+
+Calcule les statistiques croisées entre deux champs d'une collection.
+
+- **collection** : Nom de la collection cible.
+- **field1** : Nom du premier champ pour les statistiques croisées.
+- **field2** : Nom du second champ pour les statistiques croisées.
+- **selfloading** : Booléen, permet la gestion automatique de la connexion et déconnexion si défini à `true`.
+
+#### Exemple d'utilisation
+
+```javascript
+const crossFieldStats = await mongoMath.alyzeDatabaseComplete(
+  "users",
+  "age",
+  "salary",
+  true
+);
+```
+
+Cette méthode est particulièrement utile pour analyser les corrélations entre deux champs d'une même collection. Si `selfloading` est activé, `mongoMath` établit automatiquement la connexion et la ferme après l'exécution de l'analyse, offrant ainsi une gestion simplifiée de la connexion.
+
 ---
 
 ## Logger
