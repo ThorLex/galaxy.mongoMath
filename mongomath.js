@@ -142,9 +142,8 @@ class MongoMath {
       await this.handleSelfloadingDisconnection(selfloading, wasConnected);
     }
   }
-
   /**
-   * Analyse les statistiques des champs d'une collection
+   * Analyse la distribution des données d'une collection
    * @param {string} collectionName - Nom de la collection
    * @param {boolean} selfloading - Si true, gère automatiquement la connexion/déconnexion
    */
@@ -204,12 +203,7 @@ class MongoMath {
    * @param {string} field2 - Second champ
    * @param {boolean} selfloading - Si true, gère automatiquement la connexion/déconnexion
    */
-  async calculateCrossFieldStatistics(
-    collection,
-    field1,
-    field2,
-    selfloading = false
-  ) {
+  async alyzeDatabaseComplete(collection, field1, field2, selfloading = false) {
     const wasConnected = await this.ensureConnection(selfloading);
     try {
       return await this.stats.calculateCrossFieldStatistics(

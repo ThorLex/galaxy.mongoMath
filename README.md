@@ -1,396 +1,173 @@
 <p align="center">
-  <a href="http://mongomath.nettyfy.com/"><img src="https://github.com/ThorLex/galaxy.mongoMath/blob/main/galaxy.png" alt="Galaxy Logo"></a>
+  <a href="http://mongomath.netlyfy.com/"><img src="https://github.com/ThorLex/galaxy.mongoMath/blob/main/galaxy.png" alt="Galaxy Logo"></a>
 </p>
 
-# mongoMath
+# mongomath
 
-MongoMath [`MongoMath`](https://github.com/ThorLex/galaxy.mongoMath) is an advanced data analysis tool for MongoDB databases, allowing users to perform general database analysis and cross-field analysis on specified collections. It returns both basic and advanced statistical metrics, providing insights across different fields when specified.
+**Documentation en ligne** : [https://galaxy-docs.mongomath.com](unavailable)
 
-Documentation: [mongomath.nettyfy.com (Unavailable)](http://mongomath.nettyfy.com)
+## Introduction
 
-Installation
-Install MongoMath using npm:
+Le module `mongomath` fait partie du projet **Galaxy**, un ensemble de projets visant à fournir des outils performants pour le développement. `mongomath` est un outil d'analyse statistique de données MongoDB, conçu pour aider les développeurs à obtenir des statistiques avancées sur leurs collections de données.
 
-```bash
-npm install mongomath
-```
+Si vous souhaitez contribuer au projet, contactez-nous à **b.galaxy.dev@gmail.com**.
 
-Usage
-Importing and Initializing
-First, import and initialize MongoMath with a MongoDB URI:
+---
 
-```javascript
-const MongoMath = require("mongoGeneralAnalyser");
+## Fonctionnalité de selfloading
 
-const mongoMath = new MongoMath("mongodb://localhost:27017/your_database");
-```
+Chaque fonction du module `mongomath` prend un paramètre `selfloading`, un booléen qui contrôle la gestion automatique de la connexion à la base de données.
 
-dataAnalyzer(params)
-The `dataAnalyzer` method performs various analyses based on the provided parameters. It can return general statistics on collections or cross-field statistics between specified fields.
+- **selfloading = true** : La connexion est automatiquement établie et fermée à chaque appel de fonction.
+- **selfloading = false** : L'utilisateur doit gérer la connexion et la déconnexion manuellement.
 
-Parameters
+---
 
-- **`collection`** (string, optional): Specifies the collection to analyze. If no collection is provided, the entire database is analyzed.
-- **`crossFieldAnalysis`** (object, optional): Used to perform cross-field analysis on two fields within the specified collection.
-  - **`field1`** (string): The first field for cross-field analysis.
-  - **`field2`** (string): The second field for cross-field analysis.
-- **`includeIndexes`** (boolean, optional): If true, includes information on indexes.
-- **`includeSchemas`** (boolean, optional): If true, includes schema information of the documents.
+## Paramètres de connexion et d'analyse
 
-Examples
+| Paramètre     | Type    | Description                                                      |
+| ------------- | ------- | ---------------------------------------------------------------- |
+| `selfloading` | Boolean | Active la connexion/déconnexion automatique si défini à `true`.  |
+| `uri`         | String  | URI de connexion à MongoDB.                                      |
+| `params`      | Object  | Contient les paramètres pour des calculs spécifiques de données. |
+| `collection`  | String  | Nom de la collection cible pour l'analyse.                       |
+| `field1`      | String  | Premier champ pour les statistiques croisées.                    |
+| `field2`      | String  | Deuxième champ pour les statistiques croisées.                   |
+| `options`     | Object  | Options spécifiques pour la collecte de statistiques détaillées. |
 
-1. Cross-Field Analysis between Two Fields
-   In this example, cross-field analysis is performed between `age` and `height` fields in the `users` collection.
+---
 
-```javascript
-const mongoMath = new MongoMath("mongodb://localhost:27017/be");
+## Classes et méthodes principales
 
-(async () => {
-  await mongoMath.dataAnalyzer({
-    collection: "users",
-    crossFieldAnalysis: {
-      field1: "age",
-      field2: "height",
-    },
-    includeIndexes: true,
-    includeSchemas: true,
-  });
-})();
-```
+### 1. `connect()`
 
-Expected Output:
-
-{
-"General Statistics": {
-"totalDocuments": 121,
-"mean": 93.5,
-"median": 75,
-// Additional basic and advanced statistics
-},
-"Cross Field Statistics": {
-// Cross-field data
-}
-}
-
-2. General Analysis of a Specific Collection
-   When only a single collection is specified, the module returns statistics for that collection without cross-field analysis.
+Établit la connexion à MongoDB manuellement.
 
 ```javascript
-(async () => {
-  await mongoMath.dataAnalyzer({
-    collection: "users",
-    includeIndexes: true,
-    includeSchemas: true,
-  });
-})();
+const mongoMath = new MongoMath("mongodb://localhost:27017");
+await mongoMath.connect();
 ```
 
-3. Analysis of the Entire Database
-   If no collection is specified, the module performs an analysis on the entire database, providing high-level database metrics and performance statistics.
+### 2. `disconnect()`
+
+Ferme la connexion à MongoDB manuellement.
 
 ```javascript
-(async () => {
-  await mongoMath.dataAnalyzer({
-    includeIndexes: true,
-    includeSchemas: true,
-  });
-})();
+await mongoMath.disconnect();
 ```
 
-Error Handling
-If an error occurs during analysis (e.g., invalid parameters, connection issues), an error message is returned, and the database connection is safely closed.
+### 3. `dataAnalyzer(params, selfloading)`
 
-License
-This module is licensed under MIT.
+Analyse complète de la base de données.
 
-Contributing
-We welcome contributors to help expand MongoMath! Check out our [documentation (Unavailable)](http://mongomath.nettyfy.com) for more details.
-# MongoAnalyzer
-Documentation technique
-Version 1.0
-___
-
-## Table des matières
-
-1. [Introduction](#introduction)
-2. [Installation](#installation)
-3. [Configuration](#configuration)
-4. [API de référence](#api-de-référence)
-5. [Exemples d'utilisation](#exemples-dutilisation)
-6. [Gestion des erreurs](#gestion-des-erreurs)
-
-___
-
-## 1. Introduction
-
-MongoAnalyzer est un outil d'analyse avancé pour MongoDB qui permet d'obtenir des statistiques détaillées et des métriques sur votre base de données. Cet outil est conçu pour fournir une vision complète de la santé et des performances de votre base de données MongoDB.
-
-## 2. Installation
-
-### 2.1 Prérequis
-- Node.js (version 12 ou supérieure)
-- MongoDB (version 4.0 ou supérieure)
-- mongoose
-
-### 2.2 Procédure d'installation
-```bash
-npm install mongo-analyzer
-```
-
-## 3. Configuration
-
-### 3.1 Création d'une instance
-
-La classe MongoAnalyzer peut être initialisée avec différentes options de configuration :
+- **params** : Object, paramètres d'analyse.
+- **selfloading** : Booléen.
 
 ```javascript
-const MongoAnalyzer = require('mongo-analyzer');
-
-const analyzer = new MongoAnalyzer({
-    uri: 'mongodb://localhost:27017/mydatabase',
-    mongooseOptions: {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }
-});
+const analysis = await mongoMath.dataAnalyzer({ collection: "users" }, true);
 ```
 
-### 3.2 Options de configuration
+### 4. `getDatabaseInfo(options, selfloading)`
 
-| Option | Type | Description | Obligatoire |
-|--------|------|-------------|-------------|
-| uri | String | URI de connexion MongoDB | Oui |
-| mongooseOptions | Object | Options de configuration Mongoose | Non |
+Récupère les informations de base sur la base de données.
 
-## 4. API de référence
-
-### 4.1 Gestion de la connexion
-
-#### connect()
-**Description :** Établit la connexion à la base de données MongoDB.
-
-**Retourne :** Promise<void>
-
-**Exemple :**
-```javascript
-await analyzer.connect();
-```
-
-#### disconnect()
-**Description :** Ferme la connexion à la base de données.
-
-**Retourne :** Promise<void>
-
-**Exemple :**
-```javascript
-await analyzer.disconnect();
-```
-
-### 4.2 Analyse de base de données
-
-#### getDatabaseInfo(options)
-**Description :** Récupère les informations de base sur la base de données.
-
-**Paramètres :**
-- options (Object, optionnel) : Options d'analyse
-
-**Retourne :** 
-```javascript
-{
-    dbName: String,
-    collections: Number,
-    objects: Number,
-    avgObjSize: Number,
-    dataSize: Number
-}
-```
-
-#### analyzeDatabaseComplete(options)
-**Description :** Effectue une analyse complète de la base de données.
-
-**Paramètres :**
-- options (Object, optionnel) : Options d'analyse
-
-**Retourne :**
-```javascript
-{
-    timestamp: Date,
-    databaseInfo: Object,
-    collectionStatistics: Object,
-    performanceMetrics: Object,
-    storageAnalysis: Object
-}
-```
-
-### 4.3 Analyse des collections
-
-#### getDetailedCollectionStats()
-**Description :** Fournit des statistiques détaillées pour toutes les collections.
-
-**Retourne :**
-```javascript
-{
-    [collectionName]: {
-        dataDistribution: Object,
-        fieldStats: Object
-    }
-}
-```
-
-#### analyzeDataDistribution(collectionName)
-**Description :** Analyse la distribution des données dans une collection spécifique.
-
-**Paramètres :**
-- collectionName (String) : Nom de la collection à analyser
-
-**Retourne :**
-```javascript
-{
-    documentSizes: Object,
-    fieldCounts: Object,
-    updateFrequency: Object
-}
-```
-
-### 4.4 Analyse des performances
-
-#### getPerformanceMetrics()
-**Description :** Récupère les métriques de performance de l'instance MongoDB.
-
-**Retourne :**
-```javascript
-{
-    operations: {
-        totalOperations: Object,
-        activeConnections: Object,
-        networkStats: Object
-    },
-    memory: {
-        virtualMemory: Number,
-        residentMemory: Number,
-        mappedMemory: Number
-    },
-    storage: {
-        dataSize: Number,
-        storageSize: Number,
-        indexes: Number,
-        indexSize: Number
-    }
-}
-```
-
-#### getStorageAnalysis()
-**Description :** Effectue une analyse du stockage pour toutes les collections.
-
-**Retourne :**
-```javascript
-{
-    collections: {
-        [collectionName]: {
-            size: Number,
-            indexSize: Number,
-            avgDocumentSize: Number,
-            utilization: Number
-        }
-    },
-    summary: {
-        totalSize: Number,
-        totalIndexSize: Number,
-        totalCollections: Number,
-        averageCollectionSize: Number
-    }
-}
-```
-
-## 5. Exemples d'utilisation
-
-### 5.1 Analyse complète de la base de données
+- **options** : Object, options d'analyse.
+- **selfloading** : Booléen.
 
 ```javascript
-const MongoAnalyzer = require('mongo-analyzer');
-
-async function analyzeDatabase() {
-    const analyzer = new MongoAnalyzer({
-        uri: 'mongodb://localhost:27017/mydatabase'
-    });
-
-    try {
-        await analyzer.connect();
-        
-        // Analyse complète
-        const analysis = await analyzer.analyzeDatabaseComplete();
-        console.log('Analyse complète:', analysis);
-        
-        // Analyse du stockage
-        const storage = await analyzer.getStorageAnalysis();
-        console.log('Analyse du stockage:', storage);
-        
-        // Métriques de performance
-        const metrics = await analyzer.getPerformanceMetrics();
-        console.log('Métriques de performance:', metrics);
-        
-    } catch (error) {
-        console.error('Erreur lors de l'analyse:', error);
-    } finally {
-        await analyzer.disconnect();
-    }
-}
+const dbInfo = await mongoMath.getDatabaseInfo({}, true);
 ```
 
-### 5.2 Analyse d'une collection spécifique
+---
 
-```javascript
-async function analyzeCollection(collectionName) {
-    const analyzer = new MongoAnalyzer({
-        uri: 'mongodb://localhost:27017/mydatabase'
-    });
+## Logger
 
-    try {
-        await analyzer.connect();
-        
-        const distribution = await analyzer.analyzeDataDistribution(collectionName);
-        console.log('Distribution des données:', distribution);
-        
-        const fieldStats = await analyzer.analyzeFieldStatistics(collectionName);
-        console.log('Statistiques des champs:', fieldStats);
-        
-    } catch (error) {
-        console.error('Erreur lors de l'analyse:', error);
-    } finally {
-        await analyzer.disconnect();
-    }
-}
+Le module `mongomath` inclut un logger pour surveiller les activités de connexion, de déconnexion et d'analyse. Cela permet un suivi des opérations pour un débogage plus simple et une meilleure transparence.
+
+### Utilisation du Logger
+
+Le logger enregistre :
+
+- **Connexion/Déconnexion** : lorsqu'une connexion est établie ou fermée.
+- **Analyses et requêtes** : chaque analyse de données est suivie d'un enregistrement des paramètres utilisés.
+- **Erreurs** : les erreurs rencontrées sont également enregistrées.
+
+Exemple d'un log de connexion automatique :
+
+```text
+[INFO] - Connection established to MongoDB
+[INFO] - Data analysis started for collection: users
+[INFO] - Data analysis completed for collection: users
+[INFO] - Connection closed to MongoDB
 ```
 
-## 6. Gestion des erreurs
+---
 
-### 6.1 Types d'erreurs courants
+## Gestion des erreurs
 
-| Type d'erreur | Description | Solution |
-|---------------|-------------|----------|
-| ConnectionError | Échec de connexion à la base de données | Vérifier l'URI et la connectivité réseau |
-| AuthenticationError | Échec d'authentification | Vérifier les identifiants |
-| OperationError | Échec d'une opération d'analyse | Vérifier les permissions et la disponibilité des ressources |
+Le module `mongomath` gère les erreurs et envoie des messages explicites pour aider à la résolution des problèmes.
 
-### 6.2 Bonnes pratiques
+### Types d'erreurs
+
+- **Erreur de connexion** : Se produit si `selfloading` est défini à `false` mais qu'aucune connexion n’a été établie.
+- **Erreur d'analyse** : Toute erreur survenant lors de l'analyse des données (ex. champ ou collection inexistante).
+- **Erreur de déconnexion** : Peut survenir si la connexion n'est pas active.
+
+### Exemples de gestion des erreurs
 
 ```javascript
 try {
-    await analyzer.connect();
-    const analysis = await analyzer.analyzeDatabaseComplete();
+  const stats = await mongoMath.calculateStatistics(
+    { collection: "nonexistent" },
+    true
+  );
 } catch (error) {
-    if (error instanceof mongoose.Error.ConnectionError) {
-        console.error('Erreur de connexion:', error);
-    } else if (error instanceof mongoose.Error.ValidationError) {
-        console.error('Erreur de validation:', error);
-    } else {
-        console.error('Erreur inattendue:', error);
-    }
-} finally {
-    await analyzer.disconnect();
+  console.error("Error during analysis:", error.message);
 }
 ```
 
-___
+---
 
-© 2024 MongoAnalyzer. Tous droits réservés.
+## Exemples d'utilisation
+
+Pour analyser plusieurs statistiques sans gérer manuellement les connexions :
+
+```javascript
+const mongoMath = new MongoMath("mongodb://localhost:27017");
+
+// Analyse de la distribution des données
+const distribution = await mongoMath.analyzeDataDistribution("users", true);
+
+// Récupération des statistiques générales
+const stats = await mongoMath.calculateStatistics(
+  { collection: "users" },
+  true
+);
+```
+
+Si vous souhaitez gérer manuellement la connexion et la déconnexion :
+
+```javascript
+const mongoMath = new MongoMath("mongodb://localhost:27017");
+await mongoMath.connect();
+
+try {
+  const distribution = await mongoMath.analyzeDataDistribution("users", false);
+  const stats = await mongoMath.calculateStatistics(
+    { collection: "users" },
+    false
+  );
+} finally {
+  await mongoMath.disconnect();
+}
+```
+
+---
+
+## À propos de Galaxy et de `mongomath`
+
+Le projet Galaxy vise à créer un écosystème innovant pour les développeurs et les utilisateurs finaux. Notre mission est de fournir des outils de qualité, pour des applications modernes et performantes. `mongomath` est l'un des premiers produits de Galaxy, et nous invitons toute contribution pour développer davantage cet outil.
+
+---
+
+© 2024 galaxy.MongoMath. Tous droits réservés.
