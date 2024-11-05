@@ -78,6 +78,65 @@ Récupère les informations de base sur la base de données.
 const dbInfo = await mongoMath.getDatabaseInfo({}, true);
 ```
 
+### 5. `getDetailedCollectionStats(selfloading)`
+
+Obtient les statistiques détaillées des collections.
+
+```javascript
+const collectionStats = await mongoMath.getDetailedCollectionStats(true);
+```
+
+### 6. `analyzeDataDistribution(collectionName, selfloading)`
+
+Analyse la distribution des données d’une collection spécifique.
+
+```javascript
+const distribution = await mongoMath.analyzeDataDistribution("users", true);
+```
+
+### 7. `analyzeFieldStatistics(collectionName, selfloading)`
+
+Analyse les statistiques de champ dans une collection.
+
+```javascript
+const fieldStats = await mongoMath.analyzeFieldStatistics("users", true);
+```
+
+### 8. `getPerformanceMetrics(selfloading)`
+
+Récupère les métriques de performance de la base de données.
+
+```javascript
+const metrics = await mongoMath.getPerformanceMetrics(true);
+```
+
+### 9. `getStorageAnalysis(selfloading)`
+
+Obtient l'analyse du stockage de la base de données.
+
+```javascript
+const storageAnalysis = await mongoMath.getStorageAnalysis(true);
+```
+
+### 10. `alyzeDatabaseComplete(options, selfloading)`
+
+Analyse complète de la base de données.
+
+```javascript
+const completeAnalysis = await mongoMath.alyzeDatabaseComplete({}, true);
+```
+
+### 11. `calculateStatistics(params, selfloading)`
+
+Calcule des statistiques générales pour une collection.
+
+```javascript
+const stats = await mongoMath.calculateStatistics(
+  { collection: "users" },
+  true
+);
+```
+
 ---
 
 ## Logger
