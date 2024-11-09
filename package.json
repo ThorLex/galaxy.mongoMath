@@ -12,7 +12,7 @@
     "start": "node server.js"
   },
   "name": "mongomath",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "main": "mongoGeneralAnalyser.js",
   "keywords": [
     "mongodb",

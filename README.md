@@ -214,33 +214,53 @@ try {
 Pour analyser plusieurs statistiques sans gérer manuellement les connexions :
 
 ```javascript
-const mongoMath = new MongoMath("mongodb://localhost:27017");
+const DatabaseAnalyzer = require("mongoMath");
 
-// Analyse de la distribution des données
-const distribution = await mongoMath.analyzeDataDistribution("users", true);
+const analyzer = new DatabaseAnalyzer({
+  uri: "mongodb://localhost:27017/test",
+});
 
-// Récupération des statistiques générales
-const stats = await mongoMath.calculateStatistics(
-  { collection: "users" },
-  true
-);
+async function dbAnalyser() {
+  try {
+    // without connection
+    const results = await analyzer.analyzeDatabaseComplete(true);
+    console.log(results);
+  } catch (error) {
+    console.error("An error occurred:", error);
+  } finally {
+    await analyzer.disconnect();
+  }
+}
+
+dbAnalyser();
 ```
 
 Si vous souhaitez gérer manuellement la connexion et la déconnexion :
 
 ```javascript
-const mongoMath = new MongoMath("mongodb://localhost:27017");
-await mongoMath.connect();
+const DatabaseAnalyzer = require("mongoMath");
 
-try {
-  const distribution = await mongoMath.analyzeDataDistribution("users", false);
-  const stats = await mongoMath.calculateStatistics(
-    { collection: "users" },
-    false
-  );
-} finally {
-  await mongoMath.disconnect();
+const analyzer = new DatabaseAnalyzer({
+  uri: "mongodb://localhost:27017/test",
+});
+
+async function dbAnalyser() {
+  try {
+    //openning
+    await analyzer.connect();
+    //end openning
+    const results = await analyzer.analyzeDatabaseComplete();
+    console.log(results);
+  } catch (error) {
+    console.error("An error occurred:", error);
+  } finally {
+    //closing
+    await analyzer.disconnect();
+    //closing
+  }
 }
+
+dbAnalyser();
 ```
 
 ---
