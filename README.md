@@ -5,6 +5,7 @@
 # mongomath
 
 **Documentation en ligne** : [https://galaxy-docs.mongomath.com](unavailable)
+https://account.mongodb.com/account/
 
 ## Introduction
 
@@ -210,6 +211,12 @@ try {
 ---
 
 ## Exemples d'utilisation
+
+# advice:
+
+replace this: mongodb://localhost:27017/test by your own mongodb URI.If you don't have available mongodb databse instaled locally , you can use mongodb atlas **create your account here** : [https://account.mongodb.com/account/]
+
+.
 
 Pour analyser plusieurs statistiques sans gérer manuellement les connexions :
 
